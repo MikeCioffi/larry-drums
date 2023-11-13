@@ -5,7 +5,7 @@ import './index.css'; // This is where TailwindCSS is imported
 
 function App() {
 
-  const backgroundImagePath = 'src/assets/homepage.jpg'
+  const backgroundImagePath = './assets/homepage.jpg'
   return (
     <div className="App">
       {/* Fullscreen background image with flexbox centering */}
