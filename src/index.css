@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+/* Reduce vertical spacing */
+.vertical-timeline-element {
+  padding: 0;
+  margin: 0;
+
+  /* Decrease the top and bottom margin */
+}
+
+
+
+.vertical-timeline::before {
+  width: 0px;
+  /* Make the timeline line thinner */
+}
+
+/* Shrink element sizes */
+.vertical-timeline-element-date {
+
+  margin: 0 auto;
+  /* padding: 0 !important; */
+
+}
+
+.vertical-timeline-element-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* font-size: 40px; */
+  background: transparent;
+
+  border: none;
+  box-shadow: none;
+  /* Decrease the icon width */
+  /* Decrease the icon height */
+  ;
+}
+
+/* Customize text styling */
+.vertical-timeline-element-content {
+  font-size: 18px;
+  padding: 0;
+  border: none;
+  margin: 0;
+  /* Decrease font size */
+  /* padding: 2px; */
+  /* Adjust padding */
+
+}
+
+.vertical-timeline-element-content p {
+
+  font-size: 14px;
+  margin: 0;
+  padding: 0;
+}
+
+.vertical-timeline-element-content span {
+
+  font-size: 14px;
+  margin: 0;
+  padding: 0;
+}
