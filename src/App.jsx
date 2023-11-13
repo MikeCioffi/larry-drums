@@ -2,10 +2,9 @@ import React from 'react';
 import Navbar from './components/navbar'; // Import the Navbar component you will create
 import About from './components/about.jsx'
 import './index.css'; // This is where TailwindCSS is imported
+import backgroundImagePath from './assets/homepage.jpg';
 
 function App() {
-
-  const backgroundImagePath = '../src/assets/homepage.jpg'
   return (
     <div className="App">
       {/* Fullscreen background image with flexbox centering */}
