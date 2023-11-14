@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import logoImage from "../assets/logo-black.png"
 
 const Navbar = () => {
 
@@ -30,22 +31,26 @@ const Navbar = () => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
-  const NavItemClass = `p-3 rounded-xl  font-semibold hover:opacity-75 ${scrolled ? 'text-black' : 'text-white'}`
+  const NavItemClass = `p-1 rounded-xl  font-semibold hover:opacity-75 ${scrolled ? 'text-black' : 'text-white'}`
 
   return (
-    <nav className={`fixed top-0 flex w-full justify-around md:justify-end px-8 py-2 z-10 transition-all duration-500 ${scrolled ? 'bg-white shadow-md' : 'bg-transparent'}`}>
-      <ul className="flex space-x-9 text-xl">
+    <nav className={`fixed top-0 flex w-full justify-between items-center px-8 py-2 z-10 transition-all duration-500 ${scrolled ? 'bg-white shadow-md' : 'bg-transparent'}`}>
+      <div className="flex-grow-0 flex flex-row">
+        <img src={logoImage} alt="Logo" className="h-8"></img>
+        <h1 className={`ml-2 ${NavItemClass} hidden sm:block`}>LARRY CIOFFI</h1>
+      </div>
+
+      <ul className="flex space-x-9 text-sm md:text-xl ml-auto mr-0">
         <li><a href="#about" className={NavItemClass} onClick={(e) => handleNavClick(e, 'about')}>ABOUT</a></li>
         <li><a href="#about" className={NavItemClass} onClick={(e) => handleNavClick(e, 'media')}>MEDIA</a></li>
-
         <li><a href="#about" className={NavItemClass} onClick={(e) => handleNavClick(e, 'photo')}>PHOTO</a></li>
-
         <li><a href="#about" className={NavItemClass} onClick={(e) => handleNavClick(e, 'contact')}>CONTACT</a></li>
-
-
       </ul>
-    </nav >
+    </nav>
+
+
   );
 };
 
 export default Navbar;
+

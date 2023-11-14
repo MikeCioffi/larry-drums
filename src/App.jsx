@@ -2,29 +2,36 @@ import React from 'react';
 import Navbar from './components/navbar'; // Import the Navbar component you will create
 import About from './components/about.jsx'
 import './index.css'; // This is where TailwindCSS is imported
-import backgroundImagePath from './assets/homepage.jpg';
+
 
 function App() {
   return (
     <div className="App">
-      {/* Fullscreen background image with flexbox centering */}
-      <div className="flex justify-center items-center h-screen bg-cover bg-center" style={{ backgroundImage: `url(${backgroundImagePath})` }}>
+      {/* Desktop Background */}
+      <div className="hidden md:flex justify-center items-center h-screen bg-cover bg-center background-desktop">
+        <Navbar />
+        <div className="text-center md:text-left">
+          <h1 className="md:ml-56 text-black border-gray-500 md:border-b-2 border-double text-8xl tracking-widest font-bold">LARRY CIOFFI</h1>
+          <h3 className="md:ml-60 italic text-5xl tracking-wide">drummer</h3>
+        </div>
+      </div>
 
-        {/* Navbar component */}
+      {/* Mobile Background */}
+      <div className="md:hidden flex flex-row justify-center items-center h-screen bg-cover bg-center background-mobile">
+        {/* Assuming the Navbar component is absolutely positioned or otherwise taken out of the normal document flow */}
         <Navbar />
 
-        {/* Content section now centered with flexbox */}
-        <div className="text-center md:text-left ">
-          <h1 className="md:ml-56 -mt-20  text-black text-8xl tracking-wide font-semibold">LARRY CIOFFI</h1>
-          <h3 className="md:ml-60 italic text-5xl tracking-wide ">drummer</h3>
+        <div className="h-1/4"></div>
 
+        {/* Text container */}
+        <div className=" flex flex-col  items-end justify-start w-full h-2/3 text-center p-5">
+          <h1 className="text-black  border-gray-500 border-b-2 border-double text-5xl tracking-widest font-bold">LARRY <br /> CIOFFI</h1>
+          <h3 className="italic text-3xl tracking-wide">drummer</h3>
         </div>
       </div>
 
 
-      {/* Additional content can go here */}
       <About id='about' />
-
     </div>
   );
 }
