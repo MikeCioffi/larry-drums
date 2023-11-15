@@ -1,5 +1,5 @@
 import React from 'react';
-import kit from '../assets/kit.jpg'
+import kit from '../assets/kit2.jpg'
 
 
 import { FaDrum, FaMusic } from 'react-icons/fa'; // Example icon
@@ -10,14 +10,14 @@ const About = ({ id }) => {
   const TimelineItem = ({ date, description, subtitle, icon }) => (
     <li className='list-none border-b-2 border-dashed border-gray-100  w-auto '>
       <div className='flex w-full'>
-        <div className='w-1/3 flex flex-col justify-center items-center p-2'>
+        <div className='w-1/3 flex flex-col justify-center items-center text-slate-50 p-2'>
           {icon}
-          <span className="text-md font-bold text-gray-400">{date}</span>
+          <span className="text-md  text-slate-400">{date}</span>
         </div>
         <div className="w-2/3 flex flex-col justify-start items-start ">
-          <h2 className="text-black font-bold text-xl">{description}</h2>
+          <h2 className="text-slate-300 font-bold text-xl">{description}</h2>
 
-          <p className="text-gray-400 text-md italic">{subtitle}</p>
+          <p className="text-slate-400 text-md italic">{subtitle}</p>
         </div>
       </div>
     </li>
@@ -40,12 +40,12 @@ const About = ({ id }) => {
     {/* Left column for images - hidden on mobile */}
     <div className="md:flex-1 bg-cover bg-center h-auto md:h-128" style={{ backgroundImage: `url(${kit})` }}>
     </div>
-    <div className="about-text md:w-1/2 p-4 flex flex-col justify-center">
-      <h2 className="text-5xl font-bold mb-3">About Larry</h2>
-      <p className="mb-2">An experienced and versatile drummer based in Charlotte NC, Larry has performed at clubs and festivals!</p>
-      <h3 className="text-2xl font-bold mt-3">Chicagoland Area</h3>
-      <h4 className="text-lg italic text-gray-500">2001 - 2017</h4>
-      <div className="border-l-2 p-2 border-gray-200">
+    <div className="about-text bg- md:w-1/2 p-4 flex flex-col justify-center bg-custom-gradient">
+      <h2 className="text-5xl text-slate-50 font-bold mb-3">About Larry</h2>
+      <p className="mb-2 text-slate-400">An experienced and versatile drummer based in Charlotte NC, Larry has performed at clubs and festivals!</p>
+      <h3 className="text-2xl text-slate-50  font-bold mt-3">Chicagoland Area</h3>
+      <h4 className="text-lg italic text-slate-400">2001 - 2017</h4>
+      <div className="border-l-2 p-2 border-slate-200">
         {chicagoData.map((item, index) => (
           <TimelineItem
             key={item.date}
@@ -61,9 +61,9 @@ const About = ({ id }) => {
       </div>
 
 
-      <h3 className="text-2xl font-bold mt-3">Charlotte Area</h3>
-      <h3 className="text-lg italic text-gray-500">2020 - Present</h3>
-      <div className="border-l-2 p-2 border-gray-200">
+      <h3 className="text-2xl font-bold text-slate-50 mt-3">Charlotte Area</h3>
+      <h3 className="text-lg italic text-slate-400">2020 - Present</h3>
+      <div className="border-l-2 p-2 border-slate-200">
         {charlotteData.map((item, index) => (
           <TimelineItem
             key={item.date}
@@ -77,7 +77,7 @@ const About = ({ id }) => {
 
       </div>
     </div>
-  </div>
+  </div >
 
 
   )
