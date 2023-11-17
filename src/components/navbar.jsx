@@ -6,10 +6,15 @@ const Navbar = () => {
 
   const handleNavClick = (e, id) => {
     e.preventDefault(); // Prevent the default anchor behavior
+    const navbarHeight = document.querySelector('nav').offsetHeight; // Get the dynamic height of the navbar
     const element = document.getElementById(id);
-    element.scrollIntoView({
+
+    // Calculate position to scroll to by subtracting the navbar height
+    const offsetTop = element.getBoundingClientRect().top + window.pageYOffset - navbarHeight;
+
+    window.scrollTo({
+      top: offsetTop,
       behavior: 'smooth',
-      block: 'start',
     });
   };
 

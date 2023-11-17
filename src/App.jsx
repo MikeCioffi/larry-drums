@@ -12,7 +12,7 @@ function App() {
         <Navbar />
         <div className="text-center md:text-left">
           <h1 className="md:ml-56 text-slate-50   border-white md:border-b-2 border-double text-8xl tracking-widest font-bold">LARRY CIOFFI</h1>
-          <h3 className="md:ml-60 text-slate-400   italic text-5xl tracking-wide">drummer</h3>
+          <h3 className="md:ml-60 text-slate-600   italic text-5xl tracking-wide">drummer</h3>
         </div>
       </div>
 
@@ -23,8 +23,8 @@ function App() {
         <div className="h-1/6"></div>
         {/* Text container */}
         <div className=" flex flex-col  items-end justify-start w-full h-2/3 text-center p-5">
-          <h1 className="text-slate-50  border-slate-500 border-b-2 border-double text-5xl tracking-widest font-bold">LARRY <br /> CIOFFI</h1>
-          <h3 className="italic text-slate-400 text-3xl tracking-wide">drummer</h3>
+          <h1 className="text-slate-50  border-slate-200 border-b-2 border-double text-5xl tracking-widest font-bold">LARRY <br /> CIOFFI</h1>
+          <h3 className="italic text-slate-600 text-3xl tracking-wide">drummer</h3>
         </div>
       </div>
 
