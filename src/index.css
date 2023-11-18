@@ -1,4 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Karla&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata&display=swap');
+
 
 @tailwind base;
 @tailwind components;
@@ -13,11 +15,11 @@ h1,
 h2,
 h3,
 a {
-  font-family: 'Rock Salt', cursive;
+  font-family: 'Inconsolata', cursive;
 }
 
 body {
-  font-family: sans-serif;
+  font-family: 'Karla';
 }
 
 /* Custom arrow style */
