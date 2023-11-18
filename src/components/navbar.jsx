@@ -36,13 +36,13 @@ const Navbar = () => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
-  const NavItemClass = `p-1 rounded-xl  font-semibold hover:opacity-75 ${scrolled ? 'text-black' : 'text-white'}`
+  const NavItemClass = ` px-5 py-2 rounded-xl  font-semibold hover:bg-slate-600 ${scrolled ? 'text-black' : 'text-white'}`
 
   return (
-    <nav className={`fixed top-0 flex w-full justify-around items-center px-8 py-2 z-10 transition-all duration-500 ${scrolled ? 'bg-white shadow-md' : 'bg-transparent'}`}>
+    <nav className={`fixed top-0 flex w-full justify-around items-center px-8 py-2 z-10 transition-all duration-500 ${scrolled ? 'bg-white  shadow-md' : 'bg-transparent'}`}>
       <div className="hidden md:flex flex-grow-0  flex-row">
-        <img src={logoImage} alt="Logo" className="h-8"></img>
-        <h1 className={`ml-2 ${NavItemClass} hidden sm:block`}>LARRY CIOFFI</h1>
+        <img src={logoImage} alt="Logo" className="h-10 w-10 mr-2"></img>
+        <p className={`${NavItemClass} hidden xs:block`}>LARRY CIOFFI</p>
       </div>
 
       <ul className="flex space-x-12 text-sm md:text-xl ml-auto mr-0">

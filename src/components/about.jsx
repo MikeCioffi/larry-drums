@@ -15,7 +15,7 @@ const About = ({ id }) => {
           <span className="text-md  text-slate-600">{date}</span>
         </div>
         <div className="w-2/3 flex flex-col justify-start items-start ">
-          <h2 className="text-slate-800 font-bold text-xl">{description}</h2>
+          <h3 className="text-slate-800  text-xl">{description}</h3>
 
           <p className="text-slate-600 text-md italic">{subtitle}</p>
         </div>
@@ -49,41 +49,42 @@ const About = ({ id }) => {
         backgroundRepeat: 'no-repeat'
       }}
     >
-      <div className='w-full md:w-1/2 p-5 flex flex-col justify-center items-center rounded-xl bg-white bg-opacity-90 md:bg-opacity-90	 '> {/* Semi-transparent white background */}
+      <div className=' w-full lg:w-1/2 p-5 flex flex-col justify-center items-center rounded-xl bg-white bg-opacity-90 md:bg-opacity-90	 '> {/* Semi-transparent white background */}
         <h2 className="text-5xl text-slate-800 font-bold mb-3">About Larry</h2> {/* Adjusted text color for readability */}
         <p className="mb-2 text-slate-700">An experienced and versatile drummer based in Charlotte NC, Larry has performed at clubs and festivals!</p>
-        <h3 className="text-2xl text-slate-800 font-bold mt-3">Chicagoland Area</h3>
-        <h4 className="text-lg italic text-slate-600">2001 - 2017</h4>
+        <div className='w-full border-l-4 border-slate-900'>
+          <p className="text-3xl p-2 tracking-wider text-slate-800 border-b-2 border-dashed border-slate-800 w-full text-center">Chicago</p>
 
-        <div className="border-l-2 p-2 w-full border-slate-900">
-          {chicagoData.map((item, index) => (
-            <TimelineItem
-              key={item.date}
-              date={item.date}
-              icon={index % 2 === 0 ? <FaDrum /> : <FaMusic />} // Alternate icons based on index
-              description={item.description}
-              subtitle={item.subtitle}
-              backgroundColor={index % 2 === 0 ? "rgb(243, 244, 246)" : "rgb(0,0,0)"}
-            />
-          ))}
-        </div>
+          <div className=" p-2 w-fullrelative">
+            {chicagoData.map((item, index) => (
+              <TimelineItem
+                key={item.date}
+                date={item.date}
+                icon={index % 2 === 0 ? <FaDrum /> : <FaMusic />} // Alternate icons based on index
+                description={item.description}
+                subtitle={item.subtitle}
+                backgroundColor={index % 2 === 0 ? "bg-gray-200" : "bg-black"}
+              />
+            ))}
+          </div>
 
-        <h3 className="text-2xl font-bold text-slate-800 mt-3">Charlotte Area</h3>
-        <h3 className="text-lg italic text-slate-600">2020 - Present</h3>
-        <div className="border-l-2 p-2 w-full border-slate-900">
-          {charlotteData.map((item, index) => (
-            <TimelineItem
-              key={item.date}
-              date={item.date}
-              icon={index % 2 === 0 ? <FaDrum /> : <FaMusic />} // Alternate icons based on index
-              description={item.description}
-              subtitle={item.subtitle}
-            />
-          ))}
+          <p className="text-3xl p-2 tracking-wider text-slate-800 border-b-2 border-dashed border-slate-800 w-full text-center">Charlotte</p>
+
+          <div className="p-2 w-full relative timeline-arrow">
+            {charlotteData.map((item, index) => (
+              <TimelineItem
+                key={item.date}
+                date={item.date}
+                icon={index % 2 === 0 ? <FaDrum /> : <FaMusic />} // Alternate icons based on index
+                description={item.description}
+                subtitle={item.subtitle}
+              />
+            ))}
+          </div>
         </div>
       </div>
-    </div>
-  </div >
+    </div >
+  </div>
 
 
   )

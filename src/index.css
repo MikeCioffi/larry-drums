@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -9,8 +9,32 @@ html {
 
 }
 
+h1,
+h2,
+h3,
+a {
+  font-family: 'Rock Salt', cursive;
+}
+
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: sans-serif;
+}
+
+/* Custom arrow style */
+.timeline-arrow::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  /* Adjust as needed */
+  left: -12px;
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  /* Adjust size */
+  border-right: 10px solid transparent;
+  /* Adjust size */
+  border-top: 10px solid #1f2937;
+  /* Match your border color */
 }
 
 /* Reduce vertical spacing */
@@ -105,3 +129,12 @@ body {
     display: none;
   }
 }
+
+/* 
+blue
+#0F274C
+green
+#315043
+light
+#7D8171
+*/
