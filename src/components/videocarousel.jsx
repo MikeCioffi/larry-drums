@@ -1,54 +1,72 @@
-import React from 'react';
-import Slider from 'react-slick';
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import kit from '../assets/kit5.jpg'
-
+import React, { useState } from 'react';
+import ReactPlayer from 'react-player/youtube';
+import kit from '../assets/kit5.jpg';
 
 const videoIds = [
-    '3et3a7mJuEg', // Add your video IDs here
-    'f3h1ZC3dzNM',
-    'O1Eus03fDis',
-    'zEO4k6rO5tk'
-    // ...more video IDs
+    { band: 'Wasted Space', id: '3et3a7mJuEg' },
+    { band: 'Walter & Larry', id: 'ZdatbRFSqm0' },
+    { band: 'Final Groove', id: '8I2cI5DqvC4' }
 ];
+
+const VideoButton = ({ title, id, onClick, isActive }) => (
+    <button
+        className={`p-5 bg-white text-white mr-5 rounded-md mb-5
+         ${isActive ? 'bg-opacity-50 text-white' : ' bg-opacity-10 bg-white'}`}
+        onClick={() => onClick(id)}
+    // style={{ backgroundColor: 'rgba(255, 255, 255, 0.5  )' }}
+    >
+        {title}
+    </button>
+);
+
 const VideoCarousel = ({ id }) => {
-    const settings = {
-        dots: true,
-        infinite: true,
-        speed: 500,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-    };
+    const [currentVideo, setCurrentVideo] = useState('ZdatbRFSqm0');
 
     if (videoIds.length === 0) {
         console.error('No video IDs are provided for the carousel.');
         return <div>No videos to display</div>;
     }
 
-    return (<div id={id} className='w-full  p-5' style={{
-        backgroundImage: `url(${kit})`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat'
-    }}>
-        <div className="w-full min-h-screen p-8   bg-white bg-opacity-50	 rounded-lg md:w-3/5 mx-auto"> {/* 60% width on desktop, 100% on mobile */}
-            <Slider {...settings}>
-                {videoIds.map((id) => (
-                    <div key={id} className="w-full h-auto">
-                        <iframe
-                            className="w-full"
-                            style={{ height: '56.25vw', maxHeight: '80vh' }} // 16:9 aspect ratio, max height to avoid oversized player on larger screens
-                            src={`https://www.youtube.com/embed/${id}`}
-                            frameBorder="0"
-                            allowFullScreen
-                            title={`video-${id}`}
-                        ></iframe>
-                    </div>
-                ))}
-            </Slider>
+    return (
+        <div id={id} className='w-full  justify-center items-center p-5'
+            style={{
+                backgroundImage: `url(${kit})`,
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+                backgroundRepeat: 'no-repeat'
+            }}>
+            <div
+
+                className='p-4 m-auto w-full lg:w-1/2 rounded-md justify-center items-center'
+                style={{
+                    backgroundImage: `linear-gradient(to top right , rgb(152,0,209,0.2), rgb(33,84,78,0.2)`,
+                    backdropFilter: 'blur(40px)' // Adjust the pixel value to increase or decrease the blur effect
+
+                }}>
+                <h2 className="text-7xl w-full flex justify-center font-bold mb-4 border-b-8 border-slate-400 p-4"
+                    style={{ color: 'rgba(255, 255, 255, 0.5  )' }}> Highlights:</h2>
+                <div className='flex w-full justify-center'>
+                    {videoIds.map((video) => (
+                        //    button container
+                        <VideoButton
+                            key={video.id}
+                            title={video.band}
+                            id={video.id}
+                            onClick={setCurrentVideo}
+                            isActive={currentVideo === video.id} // Check if the button is for the current video
+
+                        />
+                    ))}
+                </div>
+                <ReactPlayer
+                    playing={true}
+                    width={'100%%'}
+                    height={'640px'}
+                    controls={true}
+                    url={`https://www.youtube.com/watch?v=${currentVideo}`} />
+            </div>
         </div>
-    </div>
+
     );
 };
 
