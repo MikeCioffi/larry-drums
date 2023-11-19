@@ -15,7 +15,7 @@ function App() {
         <div className="hidden md:flex md:flex-row justify-center items-start h-screen bg-cover bg-center background-desktop">
           <div className='w-4/6 lg:w-1/2 h-full'> </div>
 
-          <div className="w-1/4 lg:w-2/3 h-full text-left">
+          <div className="w-1/4 lg:w-1/2 h-full text-left">
             <div className='h-1/4  w-full'></div>
             <h1 className="inline-block text-5xl md:text-7xl lg:text-9xl tracking-wide font-black	"
               style={{
