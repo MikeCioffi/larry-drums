@@ -54,7 +54,7 @@ const About = ({ id }) => {
         }}
       >
         <div className=" w-full  p-4 lg:transform lg:skew-y-6 lg:skew-x-3"> {/* Reverse the skew */}
-          <h2 className="text-6xl md:text-7xl w-full flex justify-center font-bold"
+          <h2 className="text-5xl md:text-7xl w-full flex justify-center font-bold"
             style={{ color: 'rgba(255, 255, 255, 0.5  )' }}> About Larry</h2> {/* Adjusted text color for readability */}
           <p className="mb-3 text-gray-400  text-center">An experienced and versatile drummer based in Charlotte, NC!</p>
           <div className='w-full border-l-4 border-slate-50'>
