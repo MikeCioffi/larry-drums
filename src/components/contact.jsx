@@ -36,14 +36,14 @@ const Contact = ({ id }) => {
         >
             <div
 
-                className='p-24 rounded-md w-full lg:w-1/2   flex flex-col justify-center items-center lg:ml-9'
+                className='md:p-20 rounded-md w-full lg:w-1/2   flex flex-col justify-center items-center lg:ml-9'
                 style={{
                     backgroundImage: `linear-gradient(to top right , rgb(152,0,209,0.2), rgb(33,84,78,0.2)`,
                     backdropFilter: 'blur(40px)' // Adjust the pixel value to increase or decrease the blur effect
 
                 }}>
                 <div className=" w-full  p-4"> {/* Reverse the skew */}
-                    <h2 className="text-7xl w-full flex justify-center font-bold mb-4 border-b-8 border-slate-400 p-4"
+                    <h2 className=" text-5xl md:text-7xl w-full flex justify-center font-bold mb-4 border-b-8 border-slate-400 p-4"
                         style={{ color: 'rgba(255, 255, 255, 0.5  )' }}> Lets Connect!</h2> {/* Adjusted text color for readability */}                <label htmlFor="user_name" className="text-white mb-2">Name</label>
                     <input
                         type="text"
