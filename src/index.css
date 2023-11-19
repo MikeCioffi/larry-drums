@@ -104,6 +104,9 @@ body {
 
 .background-desktop {
   background-image: url('./assets/homepage2.jpg');
+  background-size: fill;
+  background-position: left;
+  background-repeat: no-repeat;
 }
 
 .background-mobile {
