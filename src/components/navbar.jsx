@@ -36,20 +36,18 @@ const Navbar = () => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
-  const NavItemClass = ` px-5npm install emailjs-com
- py-2 rounded-xl  font-semibold hover:bg-slate-600 ${scrolled ? 'text-black' : 'text-white'}`
+  const NavItemClass = `text-xl tracking-wide px-5 py-4 rounded-md  font-semibold ${scrolled ? 'text-black hover:bg-slate-50 ' : 'text-white hover:bg-slate-600'}`
 
   return (
     <nav className={`fixed top-0 flex w-full justify-around items-center px-8 py-2 z-10 transition-all duration-500 ${scrolled ? 'bg-white  shadow-md' : 'bg-transparent'}`}>
       <div className="hidden md:flex flex-grow-0  flex-row">
-        <img src={logoImage} alt="Logo" className="h-10 w-10 mr-2"></img>
+        <img src={logoImage} alt="Logo" className="h-10 w-10 mr-2 mt-2"></img>
         <p className={`${NavItemClass} hidden sm:block`}>LARRY CIOFFI</p>
       </div>
 
       <ul className="flex space-x-12 text-sm md:text-xl ml-auto mr-0">
         <li><a href="#about" className={NavItemClass} onClick={(e) => handleNavClick(e, 'about')}>ABOUT</a></li>
         <li><a href="#about" className={NavItemClass} onClick={(e) => handleNavClick(e, 'media')}>MEDIA</a></li>
-        <li><a href="#about" className={NavItemClass} onClick={(e) => handleNavClick(e, 'photo')}>PHOTO</a></li>
         <li><a href="#about" className={NavItemClass} onClick={(e) => handleNavClick(e, 'contact')}>CONTACT</a></li>
       </ul>
     </nav>

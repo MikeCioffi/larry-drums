@@ -8,31 +8,43 @@ import Contact from './components/contact'
 function App() {
   return (
     <div className="App">
-      {/* Desktop Background */}
-      <div className="hidden md:flex justify-center items-center h-screen bg-cover bg-center background-desktop">
-        <Navbar />
-        <div className="text-center md:text-left">
-          <h1 className="md:ml-56 text-slate-50   border-white md:border-b-2 border-double text-8xl tracking-widest font-bold">LARRY CIOFFI</h1>
-          <p className="md:ml-60 text-slate-400 text-right  italic text-5xl tracking-wide">drummer</p>
+      <Navbar />
+
+      <div>      {/* homepage  */}
+
+        <div className="hidden md:flex justify-center items-center h-screen bg-cover bg-center background-desktop">
+          <div className='w-1/2'></div>
+
+          <div className="w-2/3 text-left ">
+            <h1 className=" border-slate-400 border-b-2 border-double text-9xl tracking-widest font-bold "
+
+              style={{ color: 'rgba(255, 255, 255, 0.4)' }}
+            >LARRY CIOFFI</h1>
+            <p className="  italic text-5xl tracking-wide"
+
+              style={{ color: 'rgba(255, 255, 255, 0.2)' }}>drummer</p>
+          </div>
         </div>
-      </div>
 
-      {/* Mobile Background */}
-      <div className="md:hidden flex flex-row justify-center items-center h-screen bg-cover bg-center background-mobile">
-        {/* Assuming the Navbar component is absolutely positioned or otherwise taken out of the normal document flow */}
-        <Navbar />
-        <div className="h-1/6"></div>
-        {/* Text container */}
-        <div className=" flex flex-col  items-end justify-start w-full h-2/3 text-center p-5">
-          <h1 className="text-slate-50  border-slate-200 border-b-2 border-double text-5xl tracking-widest font-bold">LARRY <br /> CIOFFI</h1>
-          <p className="italic text-slate-400 text-3xl tracking-wide">drummer</p>
+        {/* Mobile Background */}
+        <div className="md:hidden flex flex-row justify-center items-center h-screen bg-cover bg-center background-mobile">
+          {/* Assuming the Navbar component is absolutely positioned or otherwise taken out of the normal document flow */}
+          <Navbar />
+          <div className="h-1/6"></div>
+          {/* Text container */}
+          <div className=" flex flex-col  items-end justify-start w-full h-2/3 text-center p-5">
+            <h1 style={{ color: 'rgba(255, 255, 255, 0.2)' }}
+              className=" border-slate-200 border-b-2 border-double text-5xl tracking-widest font-bold">LARRY <br /> CIOFFI</h1>
+            <p
+              style={{ color: 'rgba(255, 255, 255, 0.2)' }}
+              className="italic text-slate-400 text-3xl tracking-wide">drummer</p>
+          </div>
         </div>
+
       </div>
-
-
       <About id='about' />
-      <VideoCarousel />
-      <Contact />
+      <VideoCarousel id='media' />
+      <Contact id='contact' />
 
     </div >
   );

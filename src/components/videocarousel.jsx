@@ -12,7 +12,7 @@ const videoIds = [
     'zEO4k6rO5tk'
     // ...more video IDs
 ];
-const VideoCarousel = () => {
+const VideoCarousel = ({ id }) => {
     const settings = {
         dots: true,
         infinite: true,
@@ -26,13 +26,13 @@ const VideoCarousel = () => {
         return <div>No videos to display</div>;
     }
 
-    return (<div className='w-full  p-5' style={{
+    return (<div id={id} className='w-full  p-5' style={{
         backgroundImage: `url(${kit})`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat'
     }}>
-        <div className="w-full  p-8   bg-white bg-opacity-50	 rounded-lg md:w-3/5 mx-auto"> {/* 60% width on desktop, 100% on mobile */}
+        <div className="w-full min-h-screen p-8   bg-white bg-opacity-50	 rounded-lg md:w-3/5 mx-auto"> {/* 60% width on desktop, 100% on mobile */}
             <Slider {...settings}>
                 {videoIds.map((id) => (
                     <div key={id} className="w-full h-auto">
