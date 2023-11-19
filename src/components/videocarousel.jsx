@@ -43,7 +43,7 @@ const VideoCarousel = ({ id }) => {
                     backdropFilter: 'blur(40px)' // Adjust the pixel value to increase or decrease the blur effect
 
                 }}>
-                <h2 className="text-7xl w-full flex justify-center font-bold mb-4 border-b-8 border-slate-400 p-4"
+                <h2 className="text-5xl md:text-7xl  w-full flex justify-center font-bold mb-4 border-b-8 border-slate-400 p-4"
                     style={{ color: 'rgba(255, 255, 255, 0.5  )' }}> Highlights:</h2>
                 <div className='flex w-full justify-center'>
                     {videoIds.map((video) => (
