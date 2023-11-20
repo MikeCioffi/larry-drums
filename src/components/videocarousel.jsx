@@ -11,7 +11,7 @@ const videoIds = [
 const VideoButton = ({ title, id, onClick, isActive }) => (
     <button
         className={`p-5 bg-white text-white mr-5 rounded-md mb-5  
-         ${isActive ? 'bg-opacity-50 text-white' : ' hover:bg-opacity-20 g;bg-opacity-10 bg-white'}`}
+         ${isActive ? 'bg-opacity-50 text-white' : ' hover:bg-opacity-20 bg-opacity-10 bg-white'}`}
         onClick={() => onClick(id)}
     // style={{ backgroundColor: 'rgba(255, 255, 255, 0.5  )' }}
     >
