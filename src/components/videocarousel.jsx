@@ -10,8 +10,8 @@ const videoIds = [
 
 const VideoButton = ({ title, id, onClick, isActive }) => (
     <button
-        className={`p-5 bg-white text-white mr-5 rounded-md mb-5
-         ${isActive ? 'bg-opacity-50 text-white' : ' bg-opacity-10 bg-white'}`}
+        className={`p-5 bg-white text-white mr-5 rounded-md mb-5  
+         ${isActive ? 'bg-opacity-50 text-white' : ' hover:bg-opacity-20 bg-opacity-10 bg-white'}`}
         onClick={() => onClick(id)}
     // style={{ backgroundColor: 'rgba(255, 255, 255, 0.5  )' }}
     >
@@ -37,7 +37,7 @@ const VideoCarousel = ({ id }) => {
             }}>
             <div
 
-                className='p-4 m-auto w-full lg:w-1/2 rounded-md justify-center items-center'
+                className='p-4 md:p-20 m-auto w-full md:w-3/4 xl:w-1/2 rounded-md justify-center items-center'
                 style={{
                     backgroundImage: `linear-gradient(to top right , rgb(152,0,209,0.2), rgb(33,84,78,0.2)`,
                     backdropFilter: 'blur(40px)' // Adjust the pixel value to increase or decrease the blur effect
@@ -60,8 +60,8 @@ const VideoCarousel = ({ id }) => {
                 </div>
                 <ReactPlayer
                     playing={true}
-                    width={'100%%'}
-                    height={'640px'}
+                    width={'80%%'}
+
                     controls={true}
                     url={`https://www.youtube.com/watch?v=${currentVideo}`} />
             </div>

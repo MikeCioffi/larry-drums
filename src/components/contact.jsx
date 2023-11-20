@@ -36,7 +36,7 @@ const Contact = ({ id }) => {
         >
             <div
 
-                className='md:p-20 rounded-md w-full lg:w-1/2   flex flex-col justify-center items-center lg:ml-9'
+                className='md:p-20 rounded-md w-full w-full md:w-3/4 xl:w-1/2  flex flex-col justify-center items-center lg:ml-9'
                 style={{
                     backgroundImage: `linear-gradient(to top right , rgb(152,0,209,0.2), rgb(33,84,78,0.2)`,
                     backdropFilter: 'blur(40px)' // Adjust the pixel value to increase or decrease the blur effect
