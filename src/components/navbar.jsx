@@ -36,7 +36,7 @@ const Navbar = () => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
-  const NavItemClass = `text-xl tracking-wide px-5 py-4 rounded-md  font-semibold ${scrolled ? 'text-black hover:bg-slate-50 ' : 'text-white hover:bg-slate-600'}`
+  const NavItemClass = `sm:text-xl tracking-wide sm:px-5 sm:py-4 rounded-md  font-semibold ${scrolled ? 'text-black hover:bg-slate-50 ' : 'text-white hover:bg-slate-600'}`
 
   return (
     <nav className={`fixed top-0 flex w-full justify-around items-center px-8 py-2 z-10 transition-all duration-500 ${scrolled ? 'bg-white  shadow-md' : 'bg-transparent'}`}>
@@ -48,8 +48,8 @@ const Navbar = () => {
 
       <ul className="flex space-x-12 text-sm md:text-xl ml-auto mr-0">
         <li><a href="#about" className={NavItemClass} onClick={(e) => handleNavClick(e, 'about')}>ABOUT</a></li>
-        <li><a href="#about" className={NavItemClass} onClick={(e) => handleNavClick(e, 'media')}>MEDIA</a></li>
-        <li><a href="#about" className={NavItemClass} onClick={(e) => handleNavClick(e, 'contact')}>CONTACT</a></li>
+        <li><a href="#media" className={NavItemClass} onClick={(e) => handleNavClick(e, 'media')}>MEDIA</a></li>
+        <li><a href="#contact" className={NavItemClass} onClick={(e) => handleNavClick(e, 'contact')}>CONTACT</a></li>
       </ul>
     </nav>
 
