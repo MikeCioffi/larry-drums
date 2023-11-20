@@ -11,7 +11,7 @@ const videoIds = [
 const VideoButton = ({ title, id, onClick, isActive }) => (
     <button
         className={`p-5 bg-white text-white mr-5 rounded-md mb-5  
-         ${isActive ? 'bg-opacity-50 text-white' : ' hover:bg-opacity-20 bg-opacity-10 bg-white'}`}
+         ${isActive ? 'bg-opacity-50 text-white' : ' hover:bg-opacity-20 g;bg-opacity-10 bg-white'}`}
         onClick={() => onClick(id)}
     // style={{ backgroundColor: 'rgba(255, 255, 255, 0.5  )' }}
     >
@@ -39,9 +39,9 @@ const VideoCarousel = ({ id }) => {
 
                 className='p-4 md:p-20 m-auto w-full md:w-3/4 xl:w-1/2 rounded-md justify-center items-center'
                 style={{
-                    backgroundImage: `linear-gradient(to top right , rgb(152,0,209,0.2), rgb(33,84,78,0.2)`,
-                    backdropFilter: 'blur(40px)' // Adjust the pixel value to increase or decrease the blur effect
-
+                    backgroundImage: `linear-gradient(to top right, rgb(152,0,209,0.2), rgb(33,84,78,0.2))`,
+                    backdropFilter: 'blur(40px)', // Adjust the pixel value to increase or decrease the blur effect
+                    WebkitBackdropFilter: 'blur(40px)' // This line is for better compatibility with Safari on iOS
                 }}>
                 <h2 className="text-5xl md:text-7xl  w-full flex justify-center font-bold mb-4 border-b-8 border-slate-400 p-4"
                     style={{ color: 'rgba(255, 255, 255, 0.5  )' }}> Highlights:</h2>

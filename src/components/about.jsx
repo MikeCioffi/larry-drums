@@ -46,7 +46,7 @@ const About = ({ id }) => {
       }}
     >
 
-      <div className='lg:transform lg:-skew-y-6 lg:-skew-x-3 p-4 w-full lg:w-1/2 flex flex-col justify-center items-center lg:ml-9'
+      <div className='lg:transform lg:-skew-y-6 lg:-skew-x-3 p-4 w-full xl:w-1/2 flex flex-col justify-center items-center lg:ml-9'
         style={{
           backgroundImage: `linear-gradient(to top right, rgb(152,0,209,0.2), rgb(33,84,78,0.2))`,
           backdropFilter: 'blur(40px)', // Adjust the pixel value to increase or decrease the blur effect
