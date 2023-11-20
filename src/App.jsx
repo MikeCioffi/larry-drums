@@ -13,7 +13,7 @@ function App() {
       <div>      {/* homepage  */}
 
         <div className="hidden md:flex md:flex-row justify-center items-start h-screen bg-cover bg-center background-desktop">
-          <div className='w-4/6 lg:w-1/2 h-full'> </div>
+          <div className='w-4/6 lg:w-4/6  xl:w-5/12 h-full'> </div>
 
           <div className="w-1/4 lg:w-1/2 h-full text-left">
             <div className='h-1/4  w-full'></div>
@@ -22,7 +22,7 @@ function App() {
                 color: 'rgba(255, 255, 255, 0.4)',
                 borderBottom: '24px solid rgba(255, 255, 255, 0.4)'
               }}>
-              LARRY <br /> CIOFFI
+              LARRY CIOFFI
             </h1>
             <p className="italic text-5xl tracking-wide"
               style={{ color: 'rgba(255, 255, 255, 0.2)' }}>drummer</p>

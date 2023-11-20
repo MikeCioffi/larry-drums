@@ -23,7 +23,7 @@ const Contact = ({ id }) => {
 
     return (
         <form
-            className="min-h-screen flex justify-center items-center"
+            className="min-h-[75vh] flex justify-center items-center"
             ref={form}
             onSubmit={sendEmail}
             id={id}
@@ -36,13 +36,15 @@ const Contact = ({ id }) => {
         >
             <div
 
-                className='md:p-20 rounded-md w-full w-full md:w-3/4 xl:w-1/2  flex flex-col justify-center items-center lg:ml-9'
+                className='md:p-20 rounded-md w-full md:w-3/4 xl:w-1/2 
+                 flex flex-col justify-center items-center
+                 lg:transform lg:-skew-y-3 lg:-skew-x-1'
                 style={{
                     backgroundImage: `linear-gradient(to top right, rgb(152,0,209,0.2), rgb(33,84,78,0.2))`,
                     backdropFilter: 'blur(40px)', // Adjust the pixel value to increase or decrease the blur effect
                     WebkitBackdropFilter: 'blur(40px)' // This line is for better compatibility with Safari on iOS
                 }}>
-                <div className=" w-full  p-4"> {/* Reverse the skew */}
+                <div className=" w-full  lg:transform lg:skew-y-3 lg:skew-x-1 p-4"> {/* Reverse the skew */}
                     <h2 className=" text-5xl md:text-7xl w-full flex justify-center font-bold mb-4 border-b-8 border-slate-400 p-4"
                         style={{ color: 'rgba(255, 255, 255, 0.5  )' }}> Lets Connect!</h2> {/* Adjusted text color for readability */}                <label htmlFor="user_name" className="text-white mb-2">Name</label>
                     <input

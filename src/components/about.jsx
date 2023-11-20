@@ -46,19 +46,19 @@ const About = ({ id }) => {
       }}
     >
 
-      <div className='lg:transform lg:-skew-y-6 lg:-skew-x-3 p-4 w-full xl:w-1/2 flex flex-col justify-center items-center lg:ml-9'
+      <div className='lg:transform lg:-skew-y-3 lg:-skew-x-1 p-4 w-full xl:w-1/2 flex flex-col justify-center items-center'
         style={{
           backgroundImage: `linear-gradient(to top right, rgb(152,0,209,0.2), rgb(33,84,78,0.2))`,
           backdropFilter: 'blur(40px)', // Adjust the pixel value to increase or decrease the blur effect
           WebkitBackdropFilter: 'blur(40px)' // This line is for better compatibility with Safari on iOS
         }}
       >
-        <div className=" w-full  p-4 lg:transform lg:skew-y-6 lg:skew-x-3"> {/* Reverse the skew */}
+        <div className=" w-full  p-4 lg:transform lg:skew-y-3 lg:skew-x-1"> {/* Reverse the skew */}
           <h2 className="text-5xl md:text-7xl w-full flex justify-center font-bold"
             style={{ color: 'rgba(255, 255, 255, 0.5  )' }}> About Larry</h2> {/* Adjusted text color for readability */}
           <p className="mb-3 text-gray-400  text-center">An experienced and versatile drummer based in Charlotte, NC!</p>
           <div className='w-full border-l-4 border-slate-50'>
-            <p className="text-4xl font-bold tracking-wider border-b-2 border-dashed border-slate-400 w-full text-center
+            <p className="text-4xl p-2 font-bold tracking-wider border-b-2 border-dashed border-slate-400 w-full text-center
                  text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-teal-300 ">
 
               Chicago
@@ -78,7 +78,7 @@ const About = ({ id }) => {
             </div>
 
             <p className="text-4xl p-2 font-bold tracking-wider border-b-2 border-dashed border-slate-400 w-full text-center
-            
+        
             text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-teal-500 
             ">Charlotte</p>
 
